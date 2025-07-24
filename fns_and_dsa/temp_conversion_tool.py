@@ -17,6 +17,7 @@ try:
    temperature = float(temperature)
 except ValueError:
     print("nvalid temperature. Please enter a numeric value.")
+    exit()
 format = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
 
 if format == "F":
