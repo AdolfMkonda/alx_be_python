@@ -4,7 +4,8 @@
 from datetime import datetime
 
 def display_current_datetime():
-    return datetime.datetime.now("%Y-%m-%d %H:%M:%S")
+    x = datetime.now()
+    return x.strftime("%Y-%m-%d %H:%M:%S")
 
 current_date = display_current_datetime()
 print(f"Current date and time: {current_date}")
