@@ -1,7 +1,7 @@
 # This script will demonstrate your ability to use the datetime module for 
 # handling dates and times in Python.
 
-import datetime
+from datetime import datetime
 
 def display_current_datetime():
     return datetime.datetime.now("%Y-%m-%d %H:%M:%S")
