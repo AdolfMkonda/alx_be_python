@@ -27,7 +27,7 @@ def main():
             # Prompt for and remove an item
             for i in range(len(shopping_list)):
                 print(i, shopping_list[i])
-            remove = input("Enter Item name to be removed")
+            remove = input("Enter Item name to be removed: ")
             if remove in shopping_list:
                 shopping_list.remove(remove)
             pass
