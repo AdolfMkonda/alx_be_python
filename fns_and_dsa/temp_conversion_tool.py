@@ -13,14 +13,22 @@ def convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 temperature = input("Enter the temperature to convert: ")
-try:
-   temperature = float(temperature)
-except ValueError:
-    print("nvalid temperature. Please enter a numeric value.")
-    exit()
-format = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
 
-if format == "F":
-    print(f"{temperature}°F is {convert_to_fahrenheit(temperature)}°C")
-else:
-    print(f"{temperature}°C is {convert_to_celsius(temperature)}°F")
+try:
+    temperature = float(temperature)
+    
+    format = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
+    
+    if format == "F":
+         print(f"{temperature}°F is {convert_to_fahrenheit(temperature)}°C")
+    
+    else:
+         print(f"{temperature}°C is {convert_to_celsius(temperature)}°F")
+         
+except ValueError as e:
+    if "invalid literal" in str(e):
+        print("nvalid temperature. Please enter a numeric value.")
+    else:
+         print(str(e))
+
+
