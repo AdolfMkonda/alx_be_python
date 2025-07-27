@@ -4,6 +4,7 @@
 
 
 
+
 def display_menu():
     print("Shopping List Manager")
     print("1. Add Item")
@@ -16,31 +17,34 @@ def main():
     while True:
         display_menu()
         choice = int(input("Enter your choice: "))
+        try:
+            if choice == 1:
+                add = input("Enter the items to add: ")
+                shopping_list.append(add)
+                print(shopping_list, "Item Added Succsefull")
+                # Prompt for and add an item
+                pass
+            elif choice == 2:
+                # Prompt for and remove an item
+                for i in range(len(shopping_list)):
+                    print(i, shopping_list[i])
+                remove = input("Enter Item name to be removed: ")
+                if remove in shopping_list:
+                    shopping_list.remove(remove)
+                pass
+            elif choice == 3:
+                for i in shopping_list:
+                    print(i)
+                # Display the shopping list
+                pass
+            elif choice == 4:
+                print("Goodbye!")
+                break
+            else:
+                print("Invalid choice. Please try again.")
+        except ValueError:
+            print("Invalid choice. Please enter a number between 1 and 4.")
 
-        if choice == '1':
-            add = input("Enter the items to add: ")
-            shopping_list.append(add)
-            print(shopping_list, "Item Added Succsefull")
-            # Prompt for and add an item
-            pass
-        elif choice == '2':
-            # Prompt for and remove an item
-            for i in range(len(shopping_list)):
-                print(i, shopping_list[i])
-            remove = input("Enter Item name to be removed: ")
-            if remove in shopping_list:
-                shopping_list.remove(remove)
-            pass
-        elif choice == '3':
-            for i in shopping_list:
-                print(i)
-            # Display the shopping list
-            pass
-        elif choice == '4':
-            print("Goodbye!")
-            break
-        else:
-            print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
