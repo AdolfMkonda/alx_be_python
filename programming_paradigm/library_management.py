@@ -12,7 +12,7 @@ class Book:
 
 class Library(Book):
     def __init__(self):
-        pass
+        self._books = []
 
     def add_book(self, title, author):
         self.title = title
