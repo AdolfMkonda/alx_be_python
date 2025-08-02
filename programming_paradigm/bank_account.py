@@ -3,12 +3,10 @@
 # Use command line arguments to interact with instances of 
 # this class.
 
-
 class BankAccount:
     def __init__(self,account_balance):
         self.account_balance = account_balance
-        account_balance = 0
-        return account_balance
+        self.account_balance = 0
     
     def deposit(self, amount):
         if amount < 0:
@@ -25,7 +23,7 @@ class BankAccount:
         return self.account_balance
     
     def display_balance(self):
-        return f"Current Balance: ${amount}"
+        return f"Current Balance: ${self.account_balance}"
         
 
         
