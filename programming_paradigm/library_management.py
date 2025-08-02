@@ -13,7 +13,7 @@ class Book:
     def add_book(self):
         pass
 
-    def return_book(self, title):
+    def return_book(self):
         self.return_book = True
 
 
