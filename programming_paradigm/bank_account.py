@@ -18,6 +18,8 @@ class BankAccount:
         if self.account_balance >= amount:
             self.account_balance -= amount
             return self.account_balance
+        elif self.account_balance <= amount:
+            return "Insufficient funds."
         else:
             return "Insufficient funds."
     
