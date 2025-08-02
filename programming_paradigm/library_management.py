@@ -11,7 +11,7 @@ class Book:
         self.___is_checked_out = _is_checked_out
 
 class Library(Book):
-    def __init__(self, _books, ):
+    def __init__(self):
         pass
 
     def add_book(self, title, author):
