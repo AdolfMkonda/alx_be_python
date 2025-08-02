@@ -25,6 +25,8 @@ class Library(Book):
     def add_book(self, title, author):
         self.title = title
         self.author = author
+        if title in self._books == False:
+            return self._books.append(self.title)
 
     def check_out_book(self, title):
         self.title = title
