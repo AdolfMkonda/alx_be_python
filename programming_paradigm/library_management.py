@@ -10,6 +10,14 @@ class Book:
         self.author = author
         self.___is_checked_out = _is_checked_out
 
+    def add_book(self):
+        pass
+
+    def return_book(self, title):
+        self.return_book = True
+
+
+
 class Library(Book):
     def __init__(self):
         self._books = []
