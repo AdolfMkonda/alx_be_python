@@ -15,7 +15,9 @@ class Book:
 
 class EBook(Book):
     def __init__(self, file_size):
-        return super().__init__(file_size)
+        super().__init__(file_size)
+        self.file_size = file_size
+        
 
 
 class PrintBook(Book):
