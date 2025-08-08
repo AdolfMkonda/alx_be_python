@@ -5,13 +5,14 @@
 class Book:
     books = []
 
-    def __init__(self, title, author):
+    def __init__(self, title, author, file_size):
         self.title = title
         self.author = author
+        self.file_size = file_size
 
 class EBook(Book):
-    def __init_subclass__(cls, file_size):
-        return super().__init_subclass__()
+    def __init_subclass__(cls):
+        return super().file_size()
 
 
 class PrintBook(Book):
