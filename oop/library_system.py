@@ -15,7 +15,7 @@ class EBook(Book):
 
 
 class PrintBook(Book):
-    def __init__(self, page_count):
+    def __str__(self, page_count):
         self.page_count = page_count
 
 class Library(Book, EBook, PrintBook):
