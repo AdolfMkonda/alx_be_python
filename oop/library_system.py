@@ -25,10 +25,12 @@ class PrintBook(Book):
         self.page_count = page_count
 
 class Library(Book, EBook, PrintBook):
+
     def __init__(self, title, author):
         pass
 
     def add_book(self, book):
+        self.books = []
         self.books.append(book)
 
     def list_books(self):
