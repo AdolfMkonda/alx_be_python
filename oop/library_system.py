@@ -10,8 +10,8 @@ class Book:
         self.author = author
 
 class EBook(Book):
-    def __init__(self, file_size):
-        pass
+    def __init_subclass__(cls, file_size):
+        return super().__init_subclass__()
 
 
 class PrintBook(Book):
