@@ -14,8 +14,8 @@ class Book:
         pass
 
 class EBook(Book):
-    def __init_subclass__(cls):
-        return super().file_size()
+    def __init__(self, file_size):
+        return super().__init__(file_size)
 
 
 class PrintBook(Book):
