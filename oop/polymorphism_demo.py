@@ -22,5 +22,5 @@ class Circle(Shape):
     def __init__(self, radius):
         self.radius = radius
         super().__init__()
-        return math.pi * self.radius * self.radius
+        return math.pi * self.radius ** 2
         
