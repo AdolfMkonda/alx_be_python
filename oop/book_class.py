@@ -12,11 +12,12 @@ class Book:
         self.book = self.book.append(title)
     
     def __str__(self):
-        return f"{self.title} by {self.author}, published in {self.year}"
+        print(f"{self.title} by {self.author}, published in {self.year}")
     
     def __repr__(self):
-        return f"Book('{self.title}', '{self.author}', {self.year})"
+        print(f"Book('{self.title}', '{self.author}', {self.year})")
 
     def __del__(self):
-        pass
+        self.book.remove(self.title)
+        print(f"Deleting {self.title}")
         
